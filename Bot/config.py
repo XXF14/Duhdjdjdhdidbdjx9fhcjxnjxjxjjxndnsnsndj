@@ -18,27 +18,27 @@ class Config(object):
         BotCommand('broadcast', 'broadcast message')
     ]
 
-    DUMP_ID = int(os.environ.get("DUMP_ID",-1002205938557))
+    DUMP_ID = int(os.environ.get("DUMP_ID",))
 
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7193413575:AAG1m1RWBrafaaiqi3slj5hs3mnrZlWpkTo")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
 
-    APP_ID = int(os.environ.get("APP_ID", 26187560))
-    API_HASH = os.environ.get("API_HASH","b82ed5ce892177f1229f75ac2f93c874")
+    APP_ID = int(os.environ.get("APP_ID", ))
+    API_HASH = os.environ.get("API_HASH","")
 
     # Authorized User IDS
     AUTH_USERS = [int(id) for id in os.environ.get(
-        "AUTH_USERS", "6169288210").split()] if os.environ.get("AUTH_USERS", None) else None
+        "AUTH_USERS", "").split()] if os.environ.get("AUTH_USERS", None) else None
 
-    OWNER_ID = int(os.environ.get('OWNER_ID',"6169288210"))
+    OWNER_ID = int(os.environ.get('OWNER_ID',""))
 
     # MongoDB
-    DATABASE_URL = os.environ.get("DATABASE_URL","mongodb+srv://mrhex86:mrhex86@cluster0.8pxiirj.mongodb.net/?retryWrites=true&w=majority")
+    DATABASE_URL = os.environ.get("DATABASE_URL","")
 
     # chunk size that should be used with requests
     CHUNK_SIZE = int(os.environ.get("CHUNK_SIZE", 128))
 
     # default thumbnail to be used in the videos
-    DEF_THUMB_NAIL_VID_S = os.environ.get("DEF_THUMB_NAIL_VID_S", "https://c.top4top.io/p_3125nmskm0.png")
+    DEF_THUMB_NAIL_VID_S = os.environ.get("DEF_THUMB_NAIL_VID_S", "")
 
     # proxy for accessing youtube-dl in GeoRestricted Areas
     # Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061
