@@ -1,0 +1,75 @@
+{
+  "name": "X-URL-Uploader",
+  "description": "Telegram bot to upload HTTP link to telegram server.",
+  "keywords": [
+    "telegram",
+    "best",
+    "youtube",
+    "downloader",
+    "open",
+    "source",
+    "multi",
+    "purpose",
+    "ffmpeg",
+    "remote",
+    "uploader"
+  ],
+  "success_url": "https://xgorn.is-a.dev",
+  "website": "https://xgorn.is-a.dev",
+  "repository": "https://github.com/X-Gorn/X-URL-Uploader",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "AUTH_USERS": {
+      "description": "Telegram ID of authorized users. left it empty to make it public.",
+      "value": "",
+      "required": false
+    },
+    "OWNER_ID": {
+      "description": "Telegram ID of the owner.",
+      "value": "",
+      "required": false
+    },
+    "DUMP_ID": {
+      "description": "Dump Channel/Group.",
+      "value": "",
+      "required": false
+    },
+    "DATABASE_URL": {
+      "description": "MongoDB database URL.",
+      "value": "",
+      "required": false
+    },
+    "DEF_THUMB_NAIL_VID_S": {
+      "description": "Default thumbnail to be used in the videos. Incase yt-dlp is unable to find a thumbnail.",
+      "value": "",
+      "required": false
+    },
+    "CHUNK_SIZE": {
+      "description": "Chunk size that should be used with requests",
+      "value": "128"
+    },
+    "HTTP_PROXY": {
+      "description": "Proxy for accessing yt-dlp in GeoRestricted Areas. Get your own proxy from https://github.com/rg3/youtube-dl/issues/1091#issuecomment-230163061",
+      "value": "",
+      "required": false
+    }
+  },
+  "stack": "container",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
